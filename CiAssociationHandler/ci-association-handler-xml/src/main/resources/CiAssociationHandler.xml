@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handler:HandlerDefinition
+	oss_common:ns="com.ericsson.nms.mediation.component.handler.definitions"
+	oss_common:name="CiAssociationHandlerModel"
+	oss_common:version="1.0.0"
+	xmlns:flow="urn:com:ericsson:schema:xml:oss:fbp_flow"
+	xmlns:handler="urn:com:ericsson:schema:xml:oss:fbp_handler"
+	xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	>
+	
+  <oss_common:modelCreationInfo author="epaulki"
+		creationDate="25/09/2013">
+		<oss_common:designedModel componentId="CiAssociationHandlerModel" />
+	</oss_common:modelCreationInfo>
+
+	<oss_common:desc>Model for a handler that sets the association between an
+		EntityAddressInfo and ConnectivityInfo objects given the CI FDN.</oss_common:desc>
+
+	<flow:handler>
+		<flow:className>com.ericsson.nms.mediation.component.flow.handler.ciassociation.CiAssociationHandler</flow:className>
+
+		<flow:attributeDef
+			oss_common:name="fdn">
+			<oss_common:desc>Fully Defined Name of the ConnectivityInfo object.</oss_common:desc>
+			<oss_common:type xsi:type="oss_common:stringType" />
+			<flow:source uri="dps:fdn" />
+		</flow:attributeDef>
+
+	</flow:handler>
+</handler:HandlerDefinition>

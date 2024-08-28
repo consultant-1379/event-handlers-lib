@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  	<modelVersion>4.0.0</modelVersion>
+
+  	<description>This is a parent pom which declares a set of dependencies
+	common to all orbHandler projects.</description>
+	
+	<parent>
+		<groupId>com.ericsson.nms.mediation.component</groupId>
+		<artifactId>event-handlers-lib</artifactId>
+		<version>1.0.1-SNAPSHOT</version>
+	</parent>
+	
+	<groupId>com.ericsson.nms.mediation.component</groupId>
+	<artifactId>orbHandler</artifactId>
+	<version>1.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>[${project.artifactId}] Project</name>
+	
+	<modules>
+		<module>ERICorbhandlermodel_CXP3333333</module>
+		<module>ERICorbhandler_CXP4444444</module>
+	</modules>
+	
+</project>

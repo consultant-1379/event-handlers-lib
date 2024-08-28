@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   	<parent>
+		<groupId>com.ericsson.nms.mediation.component.flow.handler.eaicreation</groupId>
+		<artifactId>EaiCreationHandler</artifactId>
+		<version>1.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	
+   <artifactId>eai-creation-handler-code</artifactId>
+   <name>[${project.parent.artifactId}] Handler Code Module</name>
+   
+	<properties>
+	    <maven.compiler.source>1.7</maven.compiler.source>
+	    <maven.compiler.target>1.7</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.ericsson.oss.itpf.common</groupId>
+			<artifactId>eventflow-api</artifactId>
+			<version>1.0.46</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+   			<groupId>org.mockito</groupId>
+   			<artifactId>mockito-all</artifactId>
+   			<version>1.9.5</version>
+   			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-jdk14</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handler:HandlerDefinition oss_common:lifeCycle="PRELIMINARY" oss_common:version="1.0.0" 
+	oss_common:name="ORB_CONN_HANDLER" oss_common:ns="com.ericsson.nms.medition.component" 
+	xmlns:flow="urn:com:ericsson:schema:xml:oss:fbp_flow" 
+	xmlns:handler="urn:com:ericsson:schema:xml:oss:fbp_handler" 
+	xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="urn:com:ericsson:schema:xml:oss:fbp_handler fbp_handler.xsd">
+	
+	<oss_common:modelCreationInfo creationDate="2013-06-19" author="eeiwdey"> 
+		<oss_common:designedModel componentId="ORB_CONN_HANDLER"/> 
+	</oss_common:modelCreationInfo>
+
+	<oss_common:desc>Handler used by mediation service flows to initialise an ORB for connection to CPP based NEs</oss_common:desc> 
+
+	<flow:handler className="com.ericsson.nms.mediation.component.OrbHandler"> 
+
+		<flow:inputInvocationAttributeDef oss_common:name="ipAddress"> 
+			<oss_common:desc>IpAddress of the network element</oss_common:desc>
+			<oss_common:type xsi:type="oss_common:stringType"/> 
+			<flow:source uri="dps:ipAddress"/> 
+		</flow:inputInvocationAttributeDef>
+
+		<flow:inputInvocationAttributeDef oss_common:name="port"> 
+			<oss_common:desc>port used to access the CORBA naming service on the NE</oss_common:desc> 
+			<oss_common:type xsi:type="oss_common:stringType"/> 
+			<flow:source uri="dps:port"/> 
+		</flow:inputInvocationAttributeDef>
+		
+		<flow:inputInvocationAttributeDef oss_common:name="namingContext"> 
+			<oss_common:desc>Name of the object registered in the naming service</oss_common:desc> 
+			<oss_common:type xsi:type="oss_common:stringType"/> 
+			<oss_common:default xsi:type="oss_common:stringType" value="CelloConfigurationService"/>
+		</flow:inputInvocationAttributeDef>
+
+		<flow:inputInvocationAttributeDef oss_common:name="heartbeatTimeout"> 
+			<oss_common:desc>Timeout to check node status</oss_common:desc> 
+			<oss_common:type xsi:type="oss_common:integerType"/> 
+			<flow:source uri="dps:heartbeatTimeout"/> 
+		</flow:inputInvocationAttributeDef>		
+
+		<flow:inputInvocationAttributeDef oss_common:name="protocolVersion"> 
+			<oss_common:desc>Protocol version</oss_common:desc> 
+			<oss_common:type xsi:type="oss_common:stringType"/> 
+			<flow:source uri="dps:protocolVersion"/> 
+		</flow:inputInvocationAttributeDef>	
+
+		<flow:inputInvocationAttributeDef oss_common:name="isSecure"> 
+			<oss_common:desc>Flag to indicate if CORBA security is active on the NE</oss_common:desc> 
+			<oss_common:type xsi:type="oss_common:booleanType"/> 
+			<oss_common:default xsi:type="oss_common:booleanValue" value="false"/>
+		</flow:inputInvocationAttributeDef> 
+
+		<flow:inputInvocationAttributeDef oss_common:name="keyStorePath"> 
+			<oss_common:desc>Path to keyStore</oss_common:desc> 
+			<oss_common:type xsi:type="oss_common:stringType"/> 
+			<oss_common:default xsi:type="oss_common:stringType" value="/ericsson/tor/data/mediation"/>
+		</flow:inputInvocationAttributeDef> 
+
+		<flow:inputInvocationAttributeDef oss_common:name="keyStoreName"> 
+			<oss_common:desc>Name of the keyStore file</oss_common:desc> 
+			<oss_common:type xsi:type="oss_common:stringType"/> 
+			<oss_common:default xsi:type="oss_common:stringType" value="med.keystore"/>
+		</flow:inputInvocationAttributeDef>
+
+		<flow:inputInvocationAttributeDef oss_common:name="keyStorePassword"> 
+			<oss_common:desc>Password for the key store</oss_common:desc> 
+			<oss_common:type xsi:type="oss_common:stringType"/> 
+			<oss_common:default xsi:type="oss_common:stringType" value="changeit"/>
+		</flow:inputInvocationAttributeDef>
+	</flow:handler> 
+
+</handler:HandlerDefinition>

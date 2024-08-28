@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  	<modelVersion>4.0.0</modelVersion>
+  
+  	<parent>
+		<groupId>com.ericsson.nms.mediation.component.flow.handler.ciassociation</groupId>
+		<artifactId>CiAssociationHandler</artifactId>
+		<version>1.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+  	
+  	<artifactId>ERICciassociationhandlercode_CXP9030551</artifactId>
+	<packaging>${rpm.packaging}</packaging>
+  	<name>ERICciassociationhandlercode_CXP9030551</name>
+  
+  	<properties>
+	<com.ericsson.oss.rpm.architecture>noarch</com.ericsson.oss.rpm.architecture>
+	<rpm-root>opt</rpm-root>
+	<comp-name>ericsson</comp-name>
+	<install-path>com.ericsson.nms.mediation.component.flow.handler</install-path>
+	</properties>
+
+  	<dependencies>
+		<dependency>
+			<groupId>com.ericsson.nms.mediation.component.flow.handler.ciassociation</groupId>
+	   		<artifactId>ci-association-handler-code</artifactId>
+	   		<version>${project.parent.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handler:HandlerDefinition oss_common:lifeCycle="PRELIMINARY" oss_common:version="1.0.0" 
+	oss_common:name="DPS_HANDLER" oss_common:ns="com.ericsson.nms.medition.component" 
+	xmlns:flow="urn:com:ericsson:schema:xml:oss:fbp_flow" 
+	xmlns:handler="urn:com:ericsson:schema:xml:oss:fbp_handler" 
+	xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="urn:com:ericsson:schema:xml:oss:fbp_handler fbp_handler.xsd"> 
+		
+	<oss_common:modelCreationInfo creationDate="2013-06-24" author="eeiwdey"> 
+		<oss_common:designedModel componentId="DPS_HANDLER"/> 
+	</oss_common:modelCreationInfo>
+		
+	<oss_common:desc>Handler used by mediation service flows to read and update persistent and managed objects in DPS</oss_common:desc> 
+		
+	<flow:handler className="com.ericsson.oss.mediation.component.DpsHandler"/>
+
+</handler:HandlerDefinition>
